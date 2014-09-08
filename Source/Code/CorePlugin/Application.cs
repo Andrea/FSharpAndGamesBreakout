@@ -12,13 +12,15 @@ namespace Breakout
 		public void OnUpdate()
 		{
 			var ball = Scene.Current.FindComponent<Ball>();
-			if (DualityApp.Keyboard.KeyHit(Key.Space))
+			if(ball == null)
+				return;
+			if (!DualityApp.Keyboard.KeyHit(Key.Space)) 
+				return;
+
+			if (Scene.Current.FindComponent<LifeMeter>().Lives > 0 && ball.BallState == BallState.FixedToBat)
 			{
-				if (Scene.Current.FindComponent<LifeMeter>().Lives > 0 && ball.BallState == BallState.FixedToBat)
-				{
-					ball.GameObj.RigidBody.LinearVelocity = new Vector2((float) ((MathF.Rnd.NextDouble() - 0.5f)*2*100), -100);
-					ball.BallState = BallState.Free;
-				}
+				ball.GameObj.RigidBody.LinearVelocity = new Vector2((float) ((MathF.Rnd.NextDouble() - 0.5f)*2*100), -100);
+				ball.BallState = BallState.Free;
 			}
 		}
 	}
