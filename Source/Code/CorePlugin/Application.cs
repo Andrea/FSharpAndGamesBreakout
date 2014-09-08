@@ -4,7 +4,7 @@ using Duality.Resources;
 using OpenTK;
 using OpenTK.Input;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class Application : Component, ICmpUpdatable

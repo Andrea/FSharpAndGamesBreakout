@@ -91,7 +91,7 @@
             <_version dataType="Int">1</_version>
           </shapes>
         </item>
-        <item dataType="Struct" type="Debug.Brick" id="3896595969">
+        <item dataType="Struct" type="Breakout.Brick" id="3896595969">
           <active dataType="Bool">true</active>
           <gameobj dataType="ObjectRef">254306631</gameobj>
           <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -131,7 +131,7 @@
         <keys dataType="Array" type="System.Type[]" id="2565871846">
           <item dataType="Type" id="1372181888" value="Duality.Components.Transform" />
           <item dataType="Type" id="3252017358" value="Duality.Components.Physics.RigidBody" />
-          <item dataType="Type" id="2353586972" value="Debug.Brick" />
+          <item dataType="Type" id="2353586972" value="Breakout.Brick" />
           <item dataType="Type" id="3734583762" value="Duality.Components.Renderers.SpriteRenderer" />
         </keys>
         <values dataType="Array" type="Duality.Component[]" id="3159435578">

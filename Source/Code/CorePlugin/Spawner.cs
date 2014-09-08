@@ -5,7 +5,7 @@ using Duality.Resources;
 using GameRes;
 using OpenTK;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class Spawner : Component, ICmpUpdatable

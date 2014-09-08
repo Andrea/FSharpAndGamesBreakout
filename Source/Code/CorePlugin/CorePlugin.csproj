@@ -68,6 +68,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\GameRes.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Breakout.CorePlugin\Breakout.CorePlugin.fsproj">
+      <Project>{365c3700-6c7a-4832-a316-00bd7ad7c4ab}</Project>
+      <Name>Breakout.CorePlugin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(TargetDir)..\..\..\..\..\Plugins"

@@ -1,8 +1,7 @@
 using System;
 using Duality;
-using Duality.Resources;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class Ball : Component, ICmpUpdatable

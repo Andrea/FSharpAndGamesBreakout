@@ -1,7 +1,7 @@
 ﻿using System;
 using Duality;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class Mole : Component, ICmpUpdatable, ICmpInitializable

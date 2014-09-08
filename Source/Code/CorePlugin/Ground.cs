@@ -2,7 +2,7 @@
 using Duality;
 using Duality.Resources;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class Ground : Component, ICmpCollisionListener

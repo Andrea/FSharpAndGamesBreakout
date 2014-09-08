@@ -1,4 +1,4 @@
-namespace Debug
+namespace Breakout
 {
 	public enum BallState
 	{

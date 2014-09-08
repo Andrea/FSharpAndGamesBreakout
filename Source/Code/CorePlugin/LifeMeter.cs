@@ -2,7 +2,7 @@
 using Duality;
 using Duality.Components.Renderers;
 
-namespace Debug
+namespace Breakout
 {
 	[Serializable]
 	public class LifeMeter : Component, ICmpUpdatable

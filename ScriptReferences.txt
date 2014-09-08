@@ -6,4 +6,4 @@ System.Xml.Linq.dll
 FarseerDuality.dll
 plugins/ScriptingPlugin.core.dll
 OpenTK.dll
-FarseerDuality.dll
+System.Runtime.dll
