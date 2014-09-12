@@ -111,3 +111,4 @@ DualityEditor/logfile.txt
 DualityEditor/logfile_editor_reloadfailure.txt
 DualityEditor/perflog.txt
 *.dat
+*.txt
