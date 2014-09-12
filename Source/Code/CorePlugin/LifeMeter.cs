@@ -11,7 +11,9 @@ namespace Breakout
 
 		public void OnUpdate()
 		{
-			GameObj.GetComponent<TextRenderer>().Text.SourceText = "Lives: " + Lives;
+			var textRenderer = GameObj.GetComponent<TextRenderer>();
+			if (textRenderer != null)
+				textRenderer.Text.SourceText = "Lives: " + Lives;
 		}
 	}
 }

@@ -9,15 +9,23 @@ namespace Breakout
 	[Serializable]
 	public class Bat : Component, ICmpUpdatable, ICmpInitializable
 	{
+		private GameObject _leftWall;
+		private GameObject _rightWall;
+
 		public void OnUpdate()
 		{
+
 			if (DualityApp.Keyboard.KeyPressed(Key.Left))
 			{
-				GameObj.Transform.MoveBy(-Vector2.UnitX * 10);
+				_leftWall = _leftWall?? Scene.Current.FindGameObject("LeftWall");
+				if(_leftWall.Transform.Pos.X+50 <= GameObj.Transform.Pos.X)
+					GameObj.Transform.MoveBy(-Vector2.UnitX * 10);
 			}
 			else if (DualityApp.Keyboard.KeyPressed(Key.Right))
 			{
-				GameObj.Transform.MoveBy(Vector2.UnitX * 10);
+				_rightWall = _leftWall ?? Scene.Current.FindGameObject("RightWall");
+				//if (_rightWall.Transform.Pos.X <= GameObj.Transform.Pos.X)
+					GameObj.Transform.MoveBy(Vector2.UnitX * 10);
 			}
 
 			if(Scene.Current.FindComponent<Ball>().BallState == BallState.FixedToBat)

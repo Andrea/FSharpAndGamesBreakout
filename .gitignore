@@ -110,3 +110,4 @@ DualityEditor/Source/Code/UpgradeLog.htm
 DualityEditor/logfile.txt
 DualityEditor/logfile_editor_reloadfailure.txt
 DualityEditor/perflog.txt
+*.dat

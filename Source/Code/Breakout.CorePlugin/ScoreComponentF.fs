@@ -2,6 +2,7 @@
 
 open Duality
 open System
+open Duality.Components.Renderers
 
 [<Serializable>]
 type ScoreComponentF() = 
@@ -13,4 +14,9 @@ type ScoreComponentF() =
     
     member this.IncreaseScore amount =
         score <- score + amount        
-
+    
+    interface ICmpUpdatable with 
+        member this.OnUpdate() =
+            let textRenderer = this.GameObj.GetComponent<TextRenderer>()
+            if (textRenderer <> null) then
+                textRenderer.Text.SourceText <- sprintf "Score: %i"  this.Score
