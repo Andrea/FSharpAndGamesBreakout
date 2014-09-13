@@ -54,7 +54,7 @@
     <Compile Include="FSharp.CorePlugin.fs" />
     <Compile Include="Components.fs" />
     <Compile Include="MovingObjects.fs" />
-    <Compile Include="Brick.fs" />
+    <Compile Include="NonMovingObjects.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
