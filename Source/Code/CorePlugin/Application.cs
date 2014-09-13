@@ -18,7 +18,7 @@ namespace Breakout
 			var ball = Scene.Current.FindComponent<Ball>();
 			if (ball == null)
 				return;
-
+            
 			var lifeMeter = Scene.Current.FindComponent<LifeMeter>();
 			if(lifeMeter == null)
 				return;

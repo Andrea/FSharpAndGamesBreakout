@@ -11,8 +11,9 @@ type Brick() =
     
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_ )=
-            let scoreComponent = Scene.Current.FindComponent<ScoreComponentF>()            
-            scoreComponent.IncreaseScore 1 
+            let scoreComponent = Scene.Current.FindComponent<ScoreComponentF>() 
+            if ( box scoreComponent <> null) then
+                scoreComponent.IncreaseScore 1 
             this.GameObj.DisposeLater()
         member this.OnCollisionEnd(_,_)=  
             ()
@@ -29,6 +30,7 @@ type Ground() =
             if( args.CollideWith = ball) then
                 Scene.Current.FindComponent<Ball>().BallState <- BallState.FixedToBat
                 ball.Transform.Pos <- Scene.Current.FindGameObject<Bat>().Transform.Pos
+
                 let meter = Scene.Current.FindComponent<LifeMeter>()
                 meter.Lives <- meter.Lives - 1
                 if meter.Lives <= 0 then
@@ -38,3 +40,16 @@ type Ground() =
             ()
         member this.OnCollisionSolve(_,_)=  
             ()
+
+[<Serializable>]
+type DoublePoints() =
+    inherit Component()
+
+    interface ICmpCollisionListener with 
+        member this.OnCollisionBegin (_,_)=
+            Scene.Current.FindComponent<ScoreComponentF>().IncreaseScore 10
+
+        member this.OnCollisionEnd(_,_)=  
+            ()
+        member this.OnCollisionSolve(_,_)=  
+            ()    

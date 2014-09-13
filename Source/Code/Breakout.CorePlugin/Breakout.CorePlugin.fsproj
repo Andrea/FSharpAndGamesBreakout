@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FSharp.CorePlugin.fs" />
+    <Compile Include="Optionalbe.fs" />
     <Compile Include="Components.fs" />
     <Compile Include="MovingObjects.fs" />
     <Compile Include="NonMovingObjects.fs" />

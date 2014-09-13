@@ -8,10 +8,10 @@ namespace GameRes
 	public static class Data {
 		public static class Prefabs {
 			public static Duality.ContentRef<Duality.Resources.Prefab> Brick_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Brick.Prefab.res"); }}
-			public static Duality.ContentRef<Duality.Resources.Prefab> Mole_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\Mole.Prefab.res"); }}
+			public static Duality.ContentRef<Duality.Resources.Prefab> BrickSlowDownBall_Prefab { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Prefab>(@"Data\Prefabs\BrickSlowDownBall.Prefab.res"); }}
 			public static void LoadAll() {
 				Brick_Prefab.MakeAvailable();
-				Mole_Prefab.MakeAvailable();
+				BrickSlowDownBall_Prefab.MakeAvailable();
 			}
 		}
 		public static Duality.ContentRef<Duality.Resources.Scene> Scene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scene.Scene.res"); }}
