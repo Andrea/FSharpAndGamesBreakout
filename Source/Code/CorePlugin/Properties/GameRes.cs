@@ -14,14 +14,9 @@ namespace GameRes
 				Mole_Prefab.MakeAvailable();
 			}
 		}
-		public static class Scripts {
-			public static void LoadAll() {
-			}
-		}
 		public static Duality.ContentRef<Duality.Resources.Scene> Scene_Scene { get { return Duality.ContentProvider.RequestContent<Duality.Resources.Scene>(@"Data\Scene.Scene.res"); }}
 		public static void LoadAll() {
 			Prefabs.LoadAll();
-			Scripts.LoadAll();
 			Scene_Scene.MakeAvailable();
 		}
 	}
