@@ -597,12 +597,12 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">2021.09814</X>
+              <X dataType="Float">2020.09814</X>
               <Y dataType="Float">-34.91127</Y>
               <Z dataType="Float">0</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">2021.09814</X>
+              <X dataType="Float">2020.09814</X>
               <Y dataType="Float">-34.91127</Y>
               <Z dataType="Float">0</Z>
             </posAbs>

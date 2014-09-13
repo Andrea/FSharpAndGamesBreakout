@@ -18,7 +18,7 @@ namespace Breakout
 			if (DualityApp.Keyboard.KeyPressed(Key.Left))
 			{
 				_leftWall = _leftWall?? Scene.Current.FindGameObject("LeftWall");
-				if(_leftWall.Transform.Pos.X+50 <= GameObj.Transform.Pos.X)
+				if(_leftWall.Transform.Pos.X+100 <= GameObj.Transform.Pos.X - 110)
 					GameObj.Transform.MoveBy(-Vector2.UnitX * 10);
 			}
 			else if (DualityApp.Keyboard.KeyPressed(Key.Right))
