@@ -12,7 +12,7 @@ namespace Breakout
 	{
 		public void OnUpdate()
 		{
-			if (!DualityApp.Keyboard.KeyHit(Key.Space)) 
+			if (!DualityApp.Keyboard.KeyPressed(Key.Space)) 
 				return;
 
 			var ball = Scene.Current.FindComponent<Ball>();
@@ -23,7 +23,7 @@ namespace Breakout
 			if(lifeMeter == null)
 				return;
 
-			if (lifeMeter.Lives > 0 && ball.BallState == BallState.FixedToBat)
+			if (lifeMeter.Lives > 0 && ball.BallState.IsFixedToBat)
 			{
 				ball.GameObj.RigidBody.LinearVelocity = new Vector2((float) ((MathF.Rnd.NextDouble() - 0.5f)*2*100), -100);
 				ball.BallState = BallState.Free;

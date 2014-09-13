@@ -23,7 +23,6 @@ namespace Breakout
 		{
 			if (context != InitContext.Activate)
 				return;
-
 			_spawnTime = Time.GameTimer.TotalMilliseconds;
 		}
 

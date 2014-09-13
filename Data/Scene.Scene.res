@@ -823,8 +823,6 @@
             </shapes>
           </item>
           <item dataType="Struct" type="Breakout.Bat" id="1052542124">
-            <_leftWall dataType="ObjectRef">239596107</_leftWall>
-            <_rightWall dataType="ObjectRef">239596107</_rightWall>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3047004406</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -990,8 +988,10 @@
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
           <item dataType="Struct" type="Breakout.Ball" id="264729986">
-            <_x003C_BallState_x003E_k__BackingField dataType="Enum" type="Breakout.BallState" name="FixedToBat" value="0" />
             <active dataType="Bool">true</active>
+            <BallState_x0040_ dataType="Struct" type="Breakout.BallState" id="1152856890">
+              <_tag dataType="Int">0</_tag>
+            </BallState_x0040_>
             <gameobj dataType="ObjectRef">2622478592</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
@@ -1199,13 +1199,13 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">1090.91</X>
-              <Y dataType="Float">-350.65</Y>
+              <X dataType="Float">878.41</X>
+              <Y dataType="Float">852.05</Y>
               <Z dataType="Float">-64.1</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">1090.91</X>
-              <Y dataType="Float">-350.65</Y>
+              <X dataType="Float">878.41</X>
+              <Y dataType="Float">852.05</Y>
               <Z dataType="Float">-64.1</Z>
             </posAbs>
             <scale dataType="Float">25.6</scale>

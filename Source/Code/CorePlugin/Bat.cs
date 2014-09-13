@@ -10,36 +10,34 @@ namespace Breakout
 {
     public static class RigidBodyHelpers
     {
-        public static float Height(this RigidBody body)
-        {
-            return body.Shapes.First().AABB.H;
-        }
-
         public static float WidthHalf(this RigidBody body)
         {
             return body.Shapes.First().AABB.W / 2;
         }
+
+        public static float HightHalf(this RigidBody body)
+        {
+            return body.Shapes.First().AABB.H / 2;
+        }
     }
 
 	[Serializable]
-	public class Bat : Component, ICmpUpdatable, ICmpInitializable
+	public class BatOld : Component, ICmpUpdatable
 	{
-		private GameObject _leftWall;
-		private GameObject _rightWall;
-
+		
 		public void OnUpdate()
 		{
 
 			if (DualityApp.Keyboard.KeyPressed(Key.Left))
 			{
-				_leftWall = _leftWall?? Scene.Current.FindGameObject("LeftWall");
-				if(_leftWall.Transform.Pos.X+100 <= GameObj.Transform.Pos.X - _leftWall.RigidBody.WidthHalf())
+				var leftWall = Scene.Current.FindGameObject("LeftWall");
+				if(leftWall.Transform.Pos.X +leftWall.RigidBody.WidthHalf() <= GameObj.Transform.Pos.X - leftWall.RigidBody.WidthHalf())
 					GameObj.Transform.MoveBy(-Vector2.UnitX * 10);
 			}
 			else if (DualityApp.Keyboard.KeyPressed(Key.Right))
 			{
-				_rightWall = _leftWall ?? Scene.Current.FindGameObject("RightWall");
-                if (GameObj.Transform.Pos.X + GameObj.RigidBody.WidthHalf() <= _rightWall.Transform.Pos.X - _rightWall.RigidBody.WidthHalf())
+				var rightWall = Scene.Current.FindGameObject("RightWall");
+                if (GameObj.Transform.Pos.X + GameObj.RigidBody.WidthHalf() <= rightWall.Transform.Pos.X - rightWall.RigidBody.WidthHalf())
 					GameObj.Transform.MoveBy(Vector2.UnitX * 10);
 			}
 
@@ -47,14 +45,5 @@ namespace Breakout
 				Scene.Current.FindGameObject<Ball>().Transform.Pos = new Vector3(GameObj.Transform.Pos.X + 100, GameObj.Transform.Pos.Y - 50, 0);
 		}
 
-		public void OnInit(InitContext context)
-		{
-			
-		}
-
-		public void OnShutdown(ShutdownContext context)
-		{
-			
-		}
 	}
 }

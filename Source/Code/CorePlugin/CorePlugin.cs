@@ -8,6 +8,5 @@ namespace Breakout
     public class BreakoutCorePlugin : CorePlugin
     {
 		
-		
     }
 }

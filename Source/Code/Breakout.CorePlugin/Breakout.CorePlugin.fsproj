@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="FSharp.CorePlugin.fs" />
     <Compile Include="Components.fs" />
+    <Compile Include="MovingObjects.fs" />
     <Compile Include="Brick.fs" />
   </ItemGroup>
   <PropertyGroup>

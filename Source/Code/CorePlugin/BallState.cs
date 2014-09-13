@@ -1,6 +1,6 @@
 namespace Breakout
 {
-	public enum BallState
+	public enum BallStateOld
 	{
 		FixedToBat,
 		Free

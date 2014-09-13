@@ -26,16 +26,11 @@ namespace Breakout
 					var camera = Scene.Current.FindComponent<Camera>();
 
 					var screenSize = new Vector2(DualityApp.UserData.GfxWidth, DualityApp.UserData.GfxHeight);
-//					var worldTopLeft = (screenSize / 2) * (camera.GameObj.Transform.Pos.Z / camera.FocusDist);
-//					var worldBottomRight = (screenSize * 2) * (camera.GameObj.Transform.Pos.Z / camera.FocusDist);
 
 					var worldTopLeft = camera.GetSpaceCoord(Vector2.Zero - (screenSize / 2));
 					var worldBottomRight = camera.GetSpaceCoord(Vector2.Zero - (screenSize / 2));
 
 					VisualLog.Default.DrawVector(worldTopLeft.X, worldTopLeft.Y, worldTopLeft.Z, worldBottomRight.X, worldBottomRight.Y).KeepAlive(3000);
-
-					//					var worldTopLeft = camera.GetSpaceCoord(screenTopLeft);
-					//					var worldBottomRight = camera.GetSpaceCoord(screenBottomRight);
 
 					mole.Transform.Pos = new Vector3(
 						(float)MathF.Rnd.NextDouble() * (screenSize.X),

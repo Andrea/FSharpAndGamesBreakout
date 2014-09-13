@@ -6,14 +6,14 @@ using Duality.Resources;
 namespace Breakout
 {
 	[Serializable]
-	public class Ground : Component, ICmpCollisionListener
+	public class GroundOld : Component, ICmpCollisionListener
 	{
 		public void OnCollisionBegin(Component sender, CollisionEventArgs args)
 		{
 			GameObject ball = Scene.Current.FindGameObject<Ball>();
 			if (args.CollideWith == ball)
 			{
-				Scene.Current.FindComponent<Ball>().BallState = BallState.FixedToBat;
+				ball.GetComponent<Ball>().BallState = BallState.FixedToBat;
 				ball.Transform.Pos = Scene.Current.FindGameObject<Bat>().Transform.Pos;
 
 				Scene.Current.FindComponent<LifeMeter>().Lives--;

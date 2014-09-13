@@ -4,7 +4,7 @@ using Duality;
 namespace Breakout
 {
 	[Serializable]
-	public class Ball : Component, ICmpUpdatable
+	public class BallOld : Component, ICmpUpdatable
 	{
 	    public BallState BallState { get; set; }
 
