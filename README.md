@@ -18,5 +18,7 @@ F#n and Games
 
 ## Some useful links
 
+* [F# Cheat sheet](http://dungpa.github.io/fsharp-cheatsheet/)
 * [Troubleshooting F#](http://fsharpforfunandprofit.com/troubleshooting-fsharp/)
+* [Post about interop between F# and C#](http://www.navision-blog.de/blog/2013/04/03/a-tale-of-nulls/)
 
