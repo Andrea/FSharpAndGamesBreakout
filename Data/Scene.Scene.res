@@ -23,12 +23,12 @@
             <pos dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">763.06</X>
               <Y dataType="Float">365</Y>
-              <Z dataType="Float">-2859.54</Z>
+              <Z dataType="Float">-3091.44</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">763.06</X>
               <Y dataType="Float">365</Y>
-              <Z dataType="Float">-2859.54</Z>
+              <Z dataType="Float">-3091.44</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -990,6 +990,7 @@
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
           <item dataType="Struct" type="Breakout.Ball" id="264729986">
+            <_x003C_BallState_x003E_k__BackingField dataType="Enum" type="Breakout.BallState" name="FixedToBat" value="0" />
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2622478592</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
@@ -1144,15 +1145,15 @@
             </text>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
-          <item dataType="Struct" type="Breakout.LifeMeter" id="1015979015">
-            <_x003C_Lives_x003E_k__BackingField dataType="Int">3</_x003C_Lives_x003E_k__BackingField>
+          <item dataType="Struct" type="Breakout.FSharp.LifeMeter" id="3932000897">
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">721508785</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+            <Lives_x0040_ dataType="Int">3</Lives_x0040_>
           </item>
         </_items>
         <_size dataType="Int">3</_size>
-        <_version dataType="Int">5</_version>
+        <_version dataType="Int">7</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3215310456" surrogate="true">
         <header />
@@ -1160,12 +1161,12 @@
           <keys dataType="Array" type="System.Type[]" id="773023929">
             <item dataType="ObjectRef">849855478</item>
             <item dataType="Type" id="1213191886" value="Duality.Components.Renderers.TextRenderer" />
-            <item dataType="Type" id="992021322" value="Breakout.LifeMeter" />
+            <item dataType="Type" id="992021322" value="Breakout.FSharp.LifeMeter" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="2404821760">
             <item dataType="ObjectRef">3081823717</item>
             <item dataType="ObjectRef">2464137607</item>
-            <item dataType="ObjectRef">1015979015</item>
+            <item dataType="ObjectRef">3932000897</item>
           </values>
         </body>
       </compMap>

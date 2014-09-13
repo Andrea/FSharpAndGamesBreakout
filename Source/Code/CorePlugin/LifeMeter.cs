@@ -5,7 +5,7 @@ using Duality.Components.Renderers;
 namespace Breakout
 {
 	[Serializable]
-	public class LifeMeter : Component, ICmpUpdatable
+	public class LifeMeterOld : Component, ICmpUpdatable
 	{
 		public int Lives { get; set; }
 

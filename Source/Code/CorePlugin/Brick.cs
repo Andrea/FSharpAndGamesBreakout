@@ -6,7 +6,7 @@ using Duality.Resources;
 namespace Breakout
 {
 	[Serializable]
-	public class Brick : Component, ICmpCollisionListener
+	public class BrickOld : Component, ICmpCollisionListener
 	{
 		public void OnCollisionBegin(Component sender, CollisionEventArgs args)
 		{
