@@ -1,9 +1,9 @@
-﻿namespace Breakout
+﻿namespace BreakoutSolution
 
 open Duality
 open Duality.Resources
 open System
-open Breakout.FSharp
+open BreakoutSolution.FSharp
 
 [<Serializable>]
 type Brick() = 
@@ -11,7 +11,7 @@ type Brick() =
     
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_ )=
-            let scoreComponent = Scene.Current.FindComponent<ScoreComponentF>() 
+            let scoreComponent = Scene.Current.FindComponent<ScoreComponent>() 
             if ( box scoreComponent <> null) then
                 scoreComponent.IncreaseScore 1 
 
@@ -49,10 +49,8 @@ type DoublePoints() =
 
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_)=
-           (* TODO: Add code here to get the ScoreComponent and increase the score by 10
-                    Make sure to remove the () that denotes that the method return unit
-           *)
-           ()
+            Scene.Current.FindComponent<ScoreComponentF>().IncreaseScore 10
+
         member this.OnCollisionEnd(_,_)=  
             ()
         member this.OnCollisionSolve(_,_)=  
