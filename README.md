@@ -21,4 +21,5 @@ F#n and Games
 * [F# Cheat sheet](http://dungpa.github.io/fsharp-cheatsheet/)
 * [Troubleshooting F#](http://fsharpforfunandprofit.com/troubleshooting-fsharp/)
 * [Post about interop between F# and C#](http://www.navision-blog.de/blog/2013/04/03/a-tale-of-nulls/)
+* [Seamless interoperation with .NET libraries](http://fsharpforfunandprofit.com/posts/completeness-seamless-dotnet-interop/)
 
