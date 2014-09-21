@@ -26,10 +26,15 @@ type Bat() =
         
     let HalfWidth(body:RigidBody) = body.Shapes.First().AABB.W / 2.0f // how to do extension method here?
 
+    let dontGoOverTheWall (bat:GameObject) wallName (direction:float32) =     //why bat? we want pure fn
+        let wall = Scene.Current.FindGameObject(wallName)        
+        if wall.Transform.Pos.X + HalfWidth wall.RigidBody <= bat.Transform.Pos.X - HalfWidth bat.RigidBody  then
+            bat.Transform.MoveBy(direction *Vector2.UnitX * 10.0f) 
+
     let (|LeftKey|RightKey|OtherKey|) (keyboard:KeyboardInput) = 
         if keyboard.KeyPressed(Key.Left) then LeftKey
         elif keyboard.KeyPressed(Key.Right) then RightKey
-        else OtherKey "Hi"
+        else OtherKey "Hi, you pressed a key...well that is interesting :D"
             
     
     let (|RightSoemthing|) (keyboard:KeyboardInput) = 
@@ -41,7 +46,7 @@ type Bat() =
     interface ICmpUpdatable with
         member this.OnUpdate()=        
             match DualityApp.Keyboard with
-         //   | LeftSoemthing true & RightSoemthing (wasPressed, s) -> () //the left and not the right
+            //| LeftSoemthing true & RightSoemthing (wasPressed, stringy) -> () //the left and not the right
             | LeftKey  -> 
                 let leftWall = Scene.Current.FindGameObject("LeftWall")
                 if leftWall.Transform.Pos.X + HalfWidth leftWall.RigidBody <= this.GameObj.Transform.Pos.X - HalfWidth this.GameObj.RigidBody  then
@@ -49,6 +54,7 @@ type Bat() =
             | RightKey->
                  let rightWall = Scene.Current.FindGameObject("RightWall")
                  if (this.GameObj.Transform.Pos.X + HalfWidth this.GameObj.RigidBody <= rightWall.Transform.Pos.X - HalfWidth rightWall.RigidBody) then
+               //if (rightWall.Transform.Pos.X - HalfWidth rightWall.RigidBody > this.GameObj.Transform.Pos.X + HalfWidth this.GameObj.RigidBody ) then
                     this.GameObj.Transform.MoveBy(Vector2.UnitX * 10.0f)
             | OtherKey s-> ()
 

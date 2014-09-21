@@ -10,7 +10,7 @@ namespace Breakout
 	{
 		public void OnCollisionBegin(Component sender, CollisionEventArgs args)
 		{
-			var scoreComponent = Scene.Current.FindComponent<ScoreComponentF>();
+			var scoreComponent = Scene.Current.FindComponent<ScoreComponent>();
 			if (scoreComponent != null)
 				scoreComponent.IncreaseScore(1);
 			GameObj.DisposeLater();

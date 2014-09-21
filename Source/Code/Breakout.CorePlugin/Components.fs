@@ -9,7 +9,6 @@ open Optionalbe
 type ScoreComponentF() = 
     inherit Component()
 
-
     let mutable score =0
     member this.Score = score
     
@@ -19,20 +18,15 @@ type ScoreComponentF() =
 
     interface ICmpUpdatable with 
         member this.OnUpdate() = 
-            let tr = OptionComponent<TextRenderer> this.GameObj
-            match tr with
-            | None -> ()
-            | Some tr ->tr.Text.SourceText <- sprintf "Score: %i"  score
-             (* second iteration
-            match this.GameObj.GetComponent<TextRenderer>() with
-            | null -> ()
-            | tr -> tr.Text.SourceText <- sprintf "Score: %i"  score
-            *)
             
-            (* first iteration
             if (this.GameObj.GetComponent<TextRenderer>() <> null) then
                 this.GameObj.GetComponent<TextRenderer>().Text.SourceText <- sprintf "Score: %i"  score
-                *)
+(*1*)            (*TODO 1: Improve on this , don't use an if as we don't really need it here. 
+                        Hint pattern matching might help 
+                        Another Hint maybe options can help as well
+                        Another hint, you might have even a better idea :D, let us hear about it
+                 *)
+                
 [<Serializable>]
 type LifeMeter() = 
     inherit Component()     
@@ -40,7 +34,6 @@ type LifeMeter() =
     
     interface ICmpUpdatable with 
         member this.OnUpdate() =
-            if this.GameObj.GetComponent<TextRenderer>() <> null then 
-                this.GameObj.GetComponent<TextRenderer>().Text.SourceText <- sprintf "Lifes: %i"  this.Lives
-
-            
+            match this.GameObj.GetComponent<TextRenderer>() with
+            | null -> ()
+            | tr -> tr.Text.SourceText <- sprintf "Lifes: %i"  this.Lives
