@@ -14,7 +14,16 @@ F#n and Games
 
 ## Let's write some game code
 
+We are going to start off improving on the ScoreComponent, with the solution opened go to Breakout.core project and open the "components.fs" file.
 
+The ScoreComponent type inherits from Component (a type from Duality that is implemented in C#).
+We also have the equivalent of a read only property in C# , with a backing mutable field, not really a very functional aproach to this.
+
+{% highlight FSharp %}
+    member this.Score = score
+{% endhighlight %}
+
+Another thing to note on this type is that it implements [ICmpUpdatable](https://github.com/BraveSirAndrew/Duality/) (a Duality interface)
 
 ## Some useful links
 
