@@ -6,7 +6,7 @@ The idea of the game loop is to "Decouple the progression of game time from user
 The loop processes the input but doesn't wait for it.
 A game loop looks something like this
 
-{% highlight c# %}
+```C#
 
 while (true)
 {
@@ -15,7 +15,8 @@ while (true)
   render();
 }
 
-{% endhighlight %}
+```
+
  Duality has a game loop, when it runs it calls each of the components. Components you say?...
 
 [1] from [Game Programming patterns](http://gameprogrammingpatterns.com/game-loop.html)
