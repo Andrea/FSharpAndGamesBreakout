@@ -41,9 +41,10 @@ We are going to start off improving on the ScoreComponent, with the solution ope
 The ScoreComponent type inherits from Component (a type from Duality that is implemented in C#).
 We also have the equivalent of a read only property in C# , with a backing mutable field, not really a very functional aproach to this.
 
-{% highlight FSharp %}
+```FSharp
     member this.Score = score
-{% endhighlight %}
+    
+```
 
 Another thing to note on this type is that it implements [ICmpUpdatable](https://github.com/BraveSirAndrew/Duality/) (a Duality interface). 
 
