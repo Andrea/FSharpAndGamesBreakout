@@ -16,8 +16,9 @@ type Brick() =
                 scoreComponent.IncreaseScore 1 
 
             this.GameObj.DisposeLater()
-            (* TODO: what is this line above doing? 
-            *)
+(*0*)(* 
+        TODO: what is the line above doing? Why do you need it?
+*)
         member this.OnCollisionEnd(_,_)=  
             ()
         member this.OnCollisionSolve(_,_)=  

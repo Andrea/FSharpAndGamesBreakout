@@ -900,17 +900,17 @@
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
             <parentTransform />
             <pos dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">1020.08917</X>
-              <Y dataType="Float">1548.0448</Y>
+              <X dataType="Float">2246.28784</X>
+              <Y dataType="Float">1605.767</Y>
               <Z dataType="Float">0</Z>
             </pos>
             <posAbs dataType="Struct" type="OpenTK.Vector3">
-              <X dataType="Float">1020.08917</X>
-              <Y dataType="Float">1548.0448</Y>
+              <X dataType="Float">2246.28784</X>
+              <Y dataType="Float">1605.767</Y>
               <Z dataType="Float">0</Z>
             </posAbs>
-            <scale dataType="Float">1</scale>
-            <scaleAbs dataType="Float">1</scaleAbs>
+            <scale dataType="Float">1.03757274</scale>
+            <scaleAbs dataType="Float">1.03757274</scaleAbs>
             <vel dataType="Struct" type="OpenTK.Vector3">
               <X dataType="Float">0</X>
               <Y dataType="Float">0</Y>

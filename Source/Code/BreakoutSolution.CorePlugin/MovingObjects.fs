@@ -1,4 +1,4 @@
-﻿namespace BreakoutSolution
+﻿namespace BreakoutSolution.FSharp
 
 open Duality
 open Duality.Resources
@@ -24,12 +24,7 @@ type Ball() =
 type Bat() = 
     inherit Component()   
         
-    let HalfWidth(body:RigidBody) = body.Shapes.First().AABB.W / 2.0f // how to do extension method here?
-
-    let dontGoOverTheWall (bat:GameObject) wallName (direction:float32) =     //why bat? we want pure fn
-        let wall = Scene.Current.FindGameObject(wallName)        
-        if wall.Transform.Pos.X + HalfWidth wall.RigidBody <= bat.Transform.Pos.X - HalfWidth bat.RigidBody  then
-            bat.Transform.MoveBy(direction *Vector2.UnitX * 10.0f) 
+    let HalfWidth(body:RigidBody) = body.Shapes.First().AABB.W / 2.0f 
 
     let (|LeftKey|RightKey|OtherKey|) (keyboard:KeyboardInput) = 
         if keyboard.KeyPressed(Key.Left) then LeftKey

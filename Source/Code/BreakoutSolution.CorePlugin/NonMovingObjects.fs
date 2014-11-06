@@ -1,4 +1,4 @@
-﻿namespace BreakoutSolution
+﻿namespace BreakoutSolution.FSharp
 
 open Duality
 open Duality.Resources
@@ -49,9 +49,10 @@ type DoublePoints() =
 
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_)=
-            match box Scene.Current.FindComponent<ScoreComponent>() with
-            | null ->()
-            |scoreComponent -> scoreComponent.IncreaseScore scoreComponent.Score
+            
+            match Scene.Current.FindComponent<ScoreComponent>() with            
+            |scoreComponent when box scoreComponent <> null -> scoreComponent.IncreaseScore scoreComponent.Score
+            | _ -> ()
 
         member this.OnCollisionEnd(_,_)=  
             ()
