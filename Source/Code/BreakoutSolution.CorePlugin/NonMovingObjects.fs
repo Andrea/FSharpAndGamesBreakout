@@ -49,7 +49,9 @@ type DoublePoints() =
 
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_)=
-            Scene.Current.FindComponent<ScoreComponent>().IncreaseScore 10
+            match box Scene.Current.FindComponent<ScoreComponent>() with
+            | null ->()
+            |scoreComponent -> scoreComponent.IncreaseScore scoreComponent.Score
 
         member this.OnCollisionEnd(_,_)=  
             ()
