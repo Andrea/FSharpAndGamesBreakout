@@ -27,16 +27,15 @@ type Ground() =
     
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_, args)=
-            let ball = Scene.Current.FindGameObject<Ball>()
-            if( args.CollideWith = ball) then
-                Scene.Current.FindComponent<Ball>().BallState <- BallState.FixedToBat
-                ball.Transform.Pos <- Scene.Current.FindGameObject<Bat>().Transform.Pos
+            match Scene.Current.FindComponent<Ball>() with
+            | ball when box ball <> null ->                 
+                if( args.CollideWith = ball.GameObj) then
+                    ball.BallState <- BallState.FixedToBat
+                    ball.GameObj.Transform.Pos <- Scene.Current.FindGameObject<Bat>().Transform.Pos
 
-                let meter = Scene.Current.FindComponent<LifeMeter>()
-                meter.Lives <- meter.Lives - 1
-
-                if meter.Lives <= 0 then
-                    Scene.Current.FindGameObject("GameOver", false).Active <- true
+                    let meter = Scene.Current.FindComponent<LifeMeter>()
+                    meter.Lives <- meter.Lives - 1
+            | _ -> ()
            
         member this.OnCollisionEnd(_,_)=  
             ()

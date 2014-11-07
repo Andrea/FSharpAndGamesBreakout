@@ -1038,18 +1038,25 @@
             <gameobj dataType="ObjectRef">3727696575</gameobj>
             <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
           </item>
+          <item dataType="Struct" type="Breakout.FSharp.WinLooseConditions" id="2127932898">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">3727696575</gameobj>
+            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">1</_size>
-        <_version dataType="Int">9</_version>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">10</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1577581240" surrogate="true">
         <header />
         <body>
           <keys dataType="Array" type="System.Type[]" id="4105115991">
             <item dataType="Type" id="2934443022" value="Breakout.Application" />
+            <item dataType="Type" id="626541386" value="Breakout.FSharp.WinLooseConditions" />
           </keys>
           <values dataType="Array" type="Duality.Component[]" id="3481299392">
             <item dataType="ObjectRef">1854067074</item>
+            <item dataType="ObjectRef">2127932898</item>
           </values>
         </body>
       </compMap>

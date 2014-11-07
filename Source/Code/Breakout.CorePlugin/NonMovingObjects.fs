@@ -39,8 +39,7 @@ type Ground() =
                 meter.Lives <- meter.Lives - 1
 (*4*) (*TODO: OOps!! we forgot to check if the life meter is null, make sure it isn't *)
 
-                if meter.Lives <= 0 then
-                    Scene.Current.FindGameObject("GameOver", false).Active <- true
+                
            
         member this.OnCollisionEnd(_,_)=  
             ()
@@ -53,8 +52,8 @@ type DoublePoints() =
 
     interface ICmpCollisionListener with 
         member this.OnCollisionBegin (_,_)=
-(*5*)  (* TODO: Add code here to get the ScoreComponent and increase the score by 10
-         Make sure to remove the () that denotes that the method return unit   *)
+(*5*)  (* TODO: Add code here to get the ScoreComponent and double the score
+            *)
            ()
         member this.OnCollisionEnd(_,_)=  
             ()
